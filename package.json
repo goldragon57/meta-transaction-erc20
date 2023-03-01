@@ -1,0 +1,27 @@
+{
+  "name": "meta-transaction-erc20",
+  "version": "1.0.0",
+  "description": "Demo for ERC20 meta transaction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hardhat:deploy:token:mumbai": "npx hardhat run deploy/BlixToken.deploy.ts --network mumbai_testnet",
+    "hardhat:deploy:sender:mumbai": "npx hardhat run deploy/TokenSender.deploy.ts --network mumbai_testnet",
+    "hardhat:verify:token:mumbai": "npx hardhat run verify/BlixToken.verify.ts --network mumbai_testnet",
+    "hardhat:verify:sender:mumbai": "npx hardhat run verify/TokenSender.verify.ts --network mumbai_testnet"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@openzeppelin/contracts": "^4.8.1",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "hardhat": "^2.12.6",
+    "typechain": "^8.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
